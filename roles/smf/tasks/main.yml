@@ -1,0 +1,9 @@
+
+- name: Deploy or Upgrade SMF using Helm
+  ansible.builtin.command:
+    cmd: >-
+      helm upgrade --install smf ./charts/smf
+      --namespace 5g-core
+      --set image.repository=open5gs/smf
+      --set image.tag=2.4.8
+      --atomic --wait

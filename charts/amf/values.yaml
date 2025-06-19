@@ -1,0 +1,4 @@
+
+image:
+  repository: open5gs/amf
+  tag: 2.4.8

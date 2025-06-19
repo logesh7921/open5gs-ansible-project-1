@@ -1,0 +1,9 @@
+
+- name: Deploy or Upgrade AMF using Helm
+  ansible.builtin.command:
+    cmd: >-
+      helm upgrade --install amf ./charts/amf
+      --namespace 5g-core
+      --set image.repository=open5gs/amf
+      --set image.tag=2.4.8
+      --atomic --wait

@@ -1,0 +1,7 @@
+
+- name: Deploy and Upgrade Open5GS 5G Core AMF and SMF
+  hosts: 5g-core
+  gather_facts: no
+  roles:
+    - amf
+    - smf
